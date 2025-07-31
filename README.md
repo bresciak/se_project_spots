@@ -1,6 +1,6 @@
 # Project 3: Spots
 
-### Overview
+## Overview
 
 - Intro
 - Figma
@@ -20,15 +20,15 @@ The way you'll do this at work is by exporting images directly from Figma — we
 
 Good luck and have fun!
 
-# Spots Project
+### Spots Project
 
 This is a responsive web page project showcasing a photo gallery with modern design principles.
 
-## Project Video
+#### Project Video
 
 [Link to project video](your-video-link-here)
 
-## Technologies Used
+##### Technologies Used
 
 - HTML5
 - CSS3
@@ -36,7 +36,7 @@ This is a responsive web page project showcasing a photo gallery with modern des
 - Responsive design
 - Custom fonts (Poppins)
 
-## Features
+###### Features
 
 - Responsive layout for desktop, tablet, and mobile
 - Grid/Flexbox layout for cards

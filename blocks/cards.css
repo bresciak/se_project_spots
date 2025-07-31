@@ -5,17 +5,17 @@
 
 .cards__list {
   list-style-type: none;
-  padding: 0;
-  margin: 0;
+  padding: 20px 0;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, 413px);
   justify-content: center;
   gap: 40px 20px;
 }
 
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 630px) {
   .cards__list {
     grid-template-columns: repeat(auto-fit, 288px);
-    margin: 16px 136px 20px 16px;
+    gap: 20px 12px;
   }
 }
