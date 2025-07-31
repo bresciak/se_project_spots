@@ -20,9 +20,6 @@
   align-items: center;
   justify-content: space-between;
   padding-top: 12px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 .card__title {
@@ -31,6 +28,9 @@
   font-size: 20px;
   line-height: 1.2;
   color: #212121;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .card__like-btn {
@@ -49,6 +49,7 @@
 
 @media screen and (max-width: 630px) {
   .card {
+    padding: 0;
     width: 288px;
   }
 
@@ -58,7 +59,17 @@
   }
 
   .card__content {
-    gap: 2px;
-    max-width: 95px;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card__title {
+    max-width: 220px;
+  }
+
+  .card__like-button {
+    flex-shrink: 0;
   }
 }
