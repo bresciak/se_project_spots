@@ -134,6 +134,60 @@
           </ul>
         </section>
       </main>
+      <div class="modal modal_is-opened">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn"></button>
+          <h3 class="modal__title">Edit profile</h3>
+          <form class="modal__form" name="edit-profile">
+            <label class="modal__form-label" for="input-name">Name</label>
+            <input
+              class="modal__form-input"
+              type="text"
+              id="input-name"
+              name="name"
+              placeholder="Type your name"
+            />
+            <label class="modal__form-label" for="input-description"
+              >Description</label
+            >
+            <input
+              class="modal__form-input"
+              type="text"
+              id="input-description"
+              name="description"
+              placeholder="Describe yourself"
+            />
+            <button type="submit" class="modal__save-btn">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn"></button>
+          <h3 class="modal__title">New post</h3>
+          <form class="modal__form" name="new-post">
+            <label class="modal__form-label" for="input-image-link"
+              >Image link</label
+            >
+            <input
+              class="modal__form-input"
+              type="text"
+              id="input-image-link"
+              name="image-link"
+              placeholder="Paste a link to the picture"
+            />
+            <label class="modal__form-label" for="input-caption">Caption</label>
+            <input
+              class="modal__form-input"
+              type="text"
+              id="input-caption"
+              name="caption"
+              placeholder="Type your caption"
+            />
+            <button type="submit" class="modal__save-btn">Save</button>
+          </form>
+        </div>
+      </div>
       <footer class="footer">
         <p class="footer__title">2023 © Spots</p>
       </footer>
