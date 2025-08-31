@@ -7,22 +7,32 @@ const editNameInput = document.querySelector("#input-name");
 const editAboutInput = document.querySelector("#input-description");
 const editProfileForm = document.querySelector(".modal__form");
 
+function openModal(modal) {
+  modal.classList.add("modal_is-opened");
+  if (modal === editModal) {
+    editNameInput.value = profileNameElement.textContent;
+    editAboutInput.value = profileAboutElement.textContent;
+  }
+}
+
+function closeModal(modal) {
+  modal.classList.remove("modal_is-opened");
+}
+
 editButton.addEventListener("click", function () {
-  editModal.classList.add("modal_is-opened");
-  editNameInput.value = profileNameElement.textContent;
-  editAboutInput.value = profileAboutElement.textContent;
+  openModal(editModal);
 });
 
 editModalCloseButton.addEventListener("click", function () {
-  editModal.classList.remove("modal_is-opened");
+  closeModal(editModal);
 });
 
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   const newName = editNameInput.value;
   const newAbout = editAboutInput.value;
-  editNameInput.textContent = newName;
-  editAboutInput.textContent = newAbout;
+  profileNameElement.textContent = newName;
+  profileAboutElement.textContent = newAbout;
   editModal.classList.remove("modal_is-opened");
 }
 
@@ -33,11 +43,11 @@ const newModal = document.querySelector("#new-post-modal");
 const newModalCloseButton = newModal.querySelector(".modal__close-btn");
 
 newButton.addEventListener("click", function () {
-  newModal.classList.add("modal_is-opened");
+  openModal(newModal);
 });
 
 newModalCloseButton.addEventListener("click", function () {
-  newModal.classList.remove("modal_is-opened");
+  closeModal(newModal);
 });
 
 const newPostForm = document.querySelector('form[name="new-post"]');
@@ -46,8 +56,8 @@ const linkInput = document.querySelector("#input-image-link");
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  console.log("nameInput");
-  console.log("linkInput");
+  console.log(captionInput.value);
+  console.log(linkInput.value);
   newModal.classList.remove("modal_is-opened");
 }
 

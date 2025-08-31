@@ -1,7 +1,8 @@
 .card {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  width: 413px;
+  max-width: 413px;
   padding: 0 20px;
   border-radius: 8px;
 }
@@ -69,7 +70,7 @@
     max-width: 220px;
   }
 
-  .card__like-button {
+  .card__like-btn {
     flex-shrink: 0;
   }
 }

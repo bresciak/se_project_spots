@@ -5,8 +5,6 @@
 
 .cards__list {
   list-style-type: none;
-  padding: 20px 0;
-  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, 413px);
   justify-content: center;
