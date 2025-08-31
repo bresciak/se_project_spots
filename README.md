@@ -26,7 +26,7 @@ This is a responsive web page project showcasing a photo gallery with modern des
 
 #### Project Video
 
-[Link to project video] (https://1drv.ms/v/c/1a5b4e14bc01b269/EQJsYX_RrghIvr0u5sSxAb8BMiuExOkxg5mUQT6FUYIvUw?e=RJe7j4)
+[Link to project video] ( https://bresciak.github.io/se_project_spots/)
 
 ##### Technologies Used
 
