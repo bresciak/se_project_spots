@@ -2,7 +2,7 @@
   padding: 0 10px;
   visibility: hidden;
   opacity: 0;
-  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s;
   position: fixed;
   top: 0;
   left: 0;
@@ -143,8 +143,9 @@
   color: #fff;
   border-radius: 8px;
   padding: 4px 8px;
-  margin-top: 8px;
-  width: fit-content;
+  position: absolute;
+  bottom: -40px;
+  left: 0px;
   font-size: 20px;
   font-weight: 500;
   line-height: 120%;
@@ -179,5 +180,10 @@
   .modal__image {
     max-width: 288px;
     border-radius: 4px;
+  }
+
+  .modal__close-btn.modal__close-btn_type_image {
+    right: 12px;
+    top: 12px;
   }
 }

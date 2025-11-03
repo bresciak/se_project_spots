@@ -16,6 +16,11 @@
   background-color: #d9d9d9;
 }
 
+.card__image:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
 .card__content {
   display: flex;
   align-items: center;
@@ -40,6 +45,8 @@
   height: 20px;
   border: none;
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
   opacity: 0.4;
 }
 
@@ -53,10 +60,8 @@
   background-size: 23px 20px;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: transparent;
   opacity: 1;
   outline: none;
-  border: none;
 }
 
 .card__like-btn_liked:hover {
@@ -98,9 +103,6 @@
 
   .card__content {
     padding-top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .card__title {

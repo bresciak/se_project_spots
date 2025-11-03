@@ -50,9 +50,8 @@ const editAboutInput = document.querySelector("#input-description");
 const editProfileForm = document.querySelector(".modal__form");
 
 function getCardElement(data) {
-  const cardElement = document
-    .querySelector("#card__template")
-    .content.cloneNode(true);
+  const cardElement = document;
+  cardTemplate.content.cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitle = cardElement.querySelector(".card__title");
   cardImage.src = data.link;
@@ -126,8 +125,6 @@ const linkInput = document.querySelector("#input-image-link");
 
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
-  console.log(captionInput.value);
-  console.log(linkInput.value);
   const newCardData = {
     name: captionInput.value,
     link: linkInput.value,

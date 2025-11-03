@@ -84,6 +84,7 @@
               id="input-image-link"
               name="image-link"
               placeholder="Paste a link to the picture"
+              required
             />
             <label class="modal__form-label" for="input-caption">Caption</label>
             <input
@@ -92,6 +93,7 @@
               id="input-caption"
               name="caption"
               placeholder="Type your caption"
+              required
             />
             <button type="submit" class="modal__save-btn">Save</button>
           </form>
@@ -104,15 +106,15 @@
             class="modal__close-btn modal__close-btn_type_image"
             aria-label="Close modal"
           ></button>
-          <div class="modal__card-warapper">
-            <img class="modal__image" src="" alt="" />
+          <div class="modal__card-wrapper">
+            <img class="modal__image" src="#" alt="" />
             <p class="modal__caption"></p>
           </div>
         </div>
       </div>
       <template id="card__template">
         <li class="card">
-          <img class="card__image" src="" alt="" />
+          <img class="card__image" src="#" alt="" />
           <div class="card__content">
             <h2 class="card__title"></h2>
             <button
