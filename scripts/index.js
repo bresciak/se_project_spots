@@ -50,8 +50,7 @@ const editAboutInput = document.querySelector("#input-description");
 const editProfileForm = document.querySelector(".modal__form");
 
 function getCardElement(data) {
-  const cardElement = document;
-  cardTemplate.content.cloneNode(true);
+  const cardElement = cardTemplate.content.cloneNode(true);
   const cardImage = cardElement.querySelector(".card__image");
   const cardTitle = cardElement.querySelector(".card__title");
   cardImage.src = data.link;
