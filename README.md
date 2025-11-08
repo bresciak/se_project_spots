@@ -26,7 +26,7 @@ This is a responsive web page project showcasing a photo gallery with modern des
 
 #### Project Video
 
-[Link to project video](https://bresciak.github.io/se_project_spots/)
+[Link to project video]("C:\Users\Brescia\Videos\Captures\Project _Spots_ and 2 more pages - Personal - Microsoft​ Edge 2025-11-08 10-25-44.mp4")
 
 ##### Technologies Used
 

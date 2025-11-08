@@ -67,6 +67,8 @@
 .profile__add-btn {
   display: flex;
   justify-content: center;
+  align-items: center;
+  white-space: nowrap;
   margin-left: auto;
   margin-top: auto;
   border: none;
@@ -103,6 +105,7 @@
   }
 
   .profile__info {
+    align-items: center;
     margin-bottom: 20px;
   }
 
