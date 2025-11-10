@@ -78,11 +78,13 @@ modalImageCloseButton.addEventListener("click", function () {
 });
 
 function openModal(modal) {
-  modal.classList.add("modal_is-opened");
+  modal.classList.add("modal__is-opened");
+  document.addEventListener("keydown", handleEscapeKey);
 }
 
 function closeModal(modal) {
-  modal.classList.remove("modal_is-opened");
+  modal.classList.remove("modal__is-opened");
+  document.removeEventListener("keydown", handleEscapeKey);
 }
 
 editButton.addEventListener("click", function () {
@@ -140,3 +142,26 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardList.append(cardElement);
 });
+
+function handleOverlayClick(evt) {
+  if (evt.target === evt.currentTarget) {
+    closeModal(evt.target);
+  } else if (evt.target.classList.contains("modal__is-opened")) {
+    closeModal(evt.target);
+  }
+}
+
+const modals = document.querySelectorAll(".modal");
+
+modals.forEach((modal) => {
+  modal.addEventListener("click", handleOverlayClick);
+});
+
+function handleEscapeKey(evt) {
+  if (evt.key === "Escape") {
+    const openedModal = document.querySelector(".modal__is-opened");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+}
