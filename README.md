@@ -24,9 +24,11 @@ Good luck and have fun!
 
 This is a responsive web page project showcasing a photo gallery with modern design principles.
 
-#### Project Video
+#### Project Video & Deployment Page
 
-[Link to project video]("C:\Users\Brescia\Videos\Captures\Project _Spots_ and 2 more pages - Personal - Microsoft​ Edge 2025-11-08 10-25-44.mp4")
+[Link to project video]
+
+[Deployment page on GitHub] (https://bresciak.github.io/se_project_spots/);
 
 ##### Technologies Used
 
