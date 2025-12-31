@@ -46,18 +46,18 @@
   cursor: pointer;
 }
 
-.modal__close-btn.modal__close-btn_type_image {
+.modal__close-btn:hover {
+  opacity: 1;
+}
+
+.modal__close-btn_type_image {
   background-image: url(../images/closeicon.svg);
   right: 135px;
   top: 38px;
   opacity: 1;
 }
 
-.modal__close-btn:hover {
-  opacity: 1;
-}
-
-.modal__close-btn.modal__close-btn_type_image:hover {
+.modal__close-btn_type_image:hover {
   opacity: 0.4;
 }
 

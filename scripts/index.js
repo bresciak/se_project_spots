@@ -35,7 +35,7 @@ const cardList = document.querySelector(".cards__list");
 
 const modalImage = document.querySelector("#card-image-modal");
 const modalImageCloseButton = modalImage.querySelector(
-  ".modal__close-btn.modal__close-btn_type_image"
+  ".modal__close-btn_type_image"
 );
 const modalImageCaption = modalImage.querySelector(".modal__caption");
 const modalImageElement = modalImage.querySelector(".modal__image");
@@ -78,6 +78,11 @@ modalImageCloseButton.addEventListener("click", function () {
   closeModal(modalImage);
 });
 
+toggleButtonState(inputList, buttonElement, settings);
+formElement.addEventListener("reset", () => {
+  disableButton(buttonElement, settings);
+});
+
 function openModal(modal) {
   modal.classList.add("modal__is-opened");
   document.addEventListener("keydown", handleEscapeKey);
@@ -95,7 +100,7 @@ editProfileButton.addEventListener("click", function () {
 });
 
 editModalCloseButton.addEventListener("click", function () {
-  closeModal(editModal);
+  closeModal(editProfileModal);
 });
 
 function handleProfileFormSubmit(evt) {
@@ -118,7 +123,7 @@ newProfileButton.addEventListener("click", function () {
 });
 
 newPostModalCloseButton.addEventListener("click", function () {
-  closeModal(newModal);
+  closeModal(newPostModal);
 });
 
 const newPostForm = document.querySelector('form[name="new-post"]');
@@ -133,12 +138,8 @@ function handleAddCardSubmit(evt) {
   };
   const newCard = getCardElement(newCardData);
   cardList.prepend(newCard);
-  closeModal(newModal);
+  closeModal(newPostModal);
   evt.target.reset();
-
-  const submitButton = evt.target.querySelector(".modal__save-btn");
-  const inputList = Array.from(evt.target.querySelectorAll(".modal__input"));
-  toggleButtonState(inputList, submitButton, validationConfig);
 }
 
 newPostForm.addEventListener("submit", handleAddCardSubmit);
@@ -157,7 +158,14 @@ function handleOverlayClick(evt) {
 const modals = document.querySelectorAll(".modal");
 
 modals.forEach((modal) => {
-  modal.addEventListener("click", handleOverlayClick);
+  modal.addEventListener("mouseddown", (evt) => {
+    if (
+      evt.target.classList.contains("modal") ||
+      evt.target.classList.contains("modal__close-btn")
+    ) {
+      closeModal(modal);
+    }
+  });
 });
 
 function handleEscapeKey(evt) {
@@ -167,4 +175,15 @@ function handleEscapeKey(evt) {
       closeModal(openedModal);
     }
   }
+}
+
+function openEditModal() {
+  editNameInput.value = profileNameElement.textContent;
+  editAboutInput.value = profileAboutElement.textContent;
+
+  const inputList = Array.from(
+    editProfileModal.querySelectorAll(validationConfig.inputSelector)
+  );
+  resetValidation(editProfileModal, inputList, validationConfig);
+  openModal(editProfileModal);
 }
