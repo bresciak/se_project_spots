@@ -78,11 +78,6 @@ modalImageCloseButton.addEventListener("click", function () {
   closeModal(modalImage);
 });
 
-toggleButtonState(inputList, buttonElement, settings);
-formElement.addEventListener("reset", () => {
-  disableButton(buttonElement, settings);
-});
-
 function openModal(modal) {
   modal.classList.add("modal__is-opened");
   document.addEventListener("keydown", handleEscapeKey);
@@ -109,7 +104,7 @@ function handleProfileFormSubmit(evt) {
   const newAbout = editAboutInput.value;
   profileNameElement.textContent = newName;
   profileAboutElement.textContent = newAbout;
-  closeModal(editModal);
+  closeModal(editProfileModal);
 }
 
 editProfileForm.addEventListener("submit", handleProfileFormSubmit);
